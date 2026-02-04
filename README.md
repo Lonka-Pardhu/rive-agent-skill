@@ -1,10 +1,10 @@
 # Rive Agent & Skill for Claude Code
 
-> A specialized AI agent that understands **both** the Rive Editor and iOS/Swift runtime integration.
+> A specialized AI agent that understands **both** the Rive Editor and runtime integration — works great with iOS/Swift especially.
 
 ![Rive](https://img.shields.io/badge/Rive-Animation-ff6b6b?style=flat-square)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Agent-7c3aed?style=flat-square)
-![iOS](https://img.shields.io/badge/iOS-Swift-orange?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-All-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ---
@@ -18,7 +18,7 @@ Generic AI assistants give you code but don't tell you what needs to be set up i
 This Rive agent explains the **full picture**:
 
 1. **What to set up in the Rive Editor** (state machines, inputs, data binding, etc.)
-2. **Then the iOS/Swift code** to make it work
+2. **Then the runtime code** to make it work
 
 No more "why isn't this working?" moments.
 
@@ -27,11 +27,12 @@ No more "why isn't this working?" moments.
 ## Features
 
 - **Dual-sided explanations** — Editor setup + Runtime code
-- **iOS/SwiftUI focused** — Primary focus on Apple platform integration
+- **Works with all platforms** — iOS, Android, Flutter, React Native, Web (especially great with iOS/Swift)
 - **Data binding expertise** — Dynamic text, images, colors, lists
 - **Version awareness** — Knows which runtime versions support which features
 - **Auto-fetches docs** — Searches rive.app/docs when needed
 - **Auto-activates** — Triggers when you mention "rive", "state machine", ".riv file", etc.
+- **Fully customizable** — Update or extend it anytime to fit your needs
 
 ---
 
@@ -100,6 +101,16 @@ Run `/agents` in Claude Code. You should see `rive` listed under User agents.
 
 ---
 
+## Updating & Customizing
+
+You can update or customize the agent anytime:
+
+- **Add more docs** — Edit `~/.claude/skills/rive-docs/SKILL.md` to add more documentation
+- **Modify behavior** — Edit `~/.claude/agents/rive.md` to change how the agent responds
+- **Pull updates** — Run `git pull` in the cloned repo and copy the updated files
+
+---
+
 ## Usage
 
 Just ask any Rive-related question. The agent activates automatically.
@@ -107,7 +118,7 @@ Just ask any Rive-related question. The agent activates automatically.
 ### Example Prompts
 
 ```
-How do I add Rive to my iOS app?
+How do I add Rive to my app?
 ```
 
 ```
@@ -119,7 +130,7 @@ How do I trigger an animation when a user taps?
 ```
 
 ```
-How do I use data binding to update images from my Swift code?
+How do I use data binding to update images?
 ```
 
 ```
@@ -153,7 +164,8 @@ A:
 4. Connect the trigger to a transition
 5. Assign your animation to the "playing" state
 
-## In Your iOS Code:
+## In Your Code:
+// Get the trigger input and fire it
 let trigger = stateMachine.input(named: "playTrigger")
 trigger?.fire()
 ```
@@ -166,7 +178,7 @@ trigger?.fire()
 
 | Use Case | What the Agent Helps With |
 |----------|---------------------------|
-| **Adding Rive to iOS app** | SPM/CocoaPods setup, basic integration |
+| **Adding Rive to your app** | Setup for iOS, Android, Flutter, React Native, Web |
 | **Dynamic UI components** | Buttons, toggles, progress bars with data binding |
 | **Interactive animations** | State machines, triggers, touch handling |
 | **Loading remote content** | Dynamic images, user avatars from URLs |
@@ -176,18 +188,16 @@ trigger?.fire()
 
 ---
 
-## iOS Version Requirements
+## Runtime Version Requirements
 
-| Feature | Minimum iOS Runtime |
-|---------|---------------------|
-| Basic playback | v1.0.0+ |
-| State machines | v2.0.0+ |
-| Listeners | v2.0.21+ |
-| Events | v5.3.1+ |
-| Text | v5.1.5+ |
-| Data Binding | v6.8.0+ |
-| Image/List Binding | v6.11.0+ |
-| Scripting | v6.13.0+ |
+| Feature | iOS | Android | Flutter | Web |
+|---------|-----|---------|---------|-----|
+| Basic playback | v1.0.0+ | v2.0.0+ | v0.8.0+ | v1.0.0+ |
+| State machines | v2.0.0+ | v3.0.0+ | v0.9.0+ | v1.0.0+ |
+| Listeners | v2.0.21+ | v3.0.8+ | v0.9.0+ | v1.0.65+ |
+| Events | v5.3.1+ | v8.4.0+ | v0.11.17+ | v2.4.3+ |
+| Data Binding | v6.8.0+ | v10.1.0+ | v0.14.0+ | v2.26.6+ |
+| Scripting | v6.13.0+ | v11.1.0+ | v0.14.1+ | v2.34.0+ |
 
 ---
 
@@ -215,6 +225,6 @@ MIT License — Free to use, modify, and distribute.
 ---
 
 <p align="center">
-  <b>Built for developers learning Rive for iOS</b><br>
+  <b>Built for developers learning Rive</b><br>
   If this helped you, consider giving it a ⭐
 </p>
