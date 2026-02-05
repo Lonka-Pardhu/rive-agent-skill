@@ -1,6 +1,6 @@
 # Rive Agent & Skill for Claude Code
 
-> A specialized AI agent that understands **both** the Rive Editor and runtime integration — works great with iOS/Swift especially.
+> A comprehensive AI agent that understands **both** the Rive Editor and runtime integration — supports ALL platforms.
 
 ![Rive](https://img.shields.io/badge/Rive-Animation-ff6b6b?style=flat-square)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-Agent-7c3aed?style=flat-square)
@@ -27,8 +27,10 @@ No more "why isn't this working?" moments.
 ## Features
 
 - **Dual-sided explanations** — Editor setup + Runtime code
-- **Works with all platforms** — iOS, Android, Flutter, React Native, Web, Unity, Unreal
-- **Optimized per Anthropic guidelines** — Focused agent (79 lines) + progressive disclosure skill
+- **Works with ALL platforms** — iOS, Android, Flutter, React Native, Web, React, Unity, Unreal, Defold
+- **Self-healing links** — Auto-recovers when documentation URLs change
+- **Version sync** — Keeps feature support matrix up-to-date
+- **Smart questions** — Asks the right clarifying questions to help faster
 - **Preloads skill automatically** — rive-docs skill injected at startup
 - **Persistent memory** — Learns patterns across conversations
 - **Auto-fetches docs** — Searches rive.app/docs when needed
