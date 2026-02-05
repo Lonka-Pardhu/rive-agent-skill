@@ -93,11 +93,17 @@ Run `/agents` in Claude Code. You should see `rive` listed under User agents.
 ```
 ~/.claude/
 ├── agents/
-│   └── rive.md              ← Agent file (copy here)
+│   └── rive.md                      ← Agent file (copy here)
 └── skills/
-    └── rive-docs/
-        └── SKILL.md         ← Skill file (copy folder here)
+    └── rive-docs/                   ← Skill folder (copy here)
+        ├── SKILL.md                 ← Core skill (109 lines)
+        └── references/
+            ├── feature-support.md   ← Version tables by platform
+            ├── runtime-packages.md  ← Installation & packages
+            └── doc-links.md         ← Documentation URLs
 ```
+
+The skill uses **progressive disclosure** — core info loads immediately, reference files load only when needed.
 
 ---
 
@@ -105,8 +111,10 @@ Run `/agents` in Claude Code. You should see `rive` listed under User agents.
 
 You can update or customize the agent anytime:
 
-- **Add more docs** — Edit `~/.claude/skills/rive-docs/SKILL.md` to add more documentation
-- **Modify behavior** — Edit `~/.claude/agents/rive.md` to change how the agent responds
+- **Add version info** — Edit `~/.claude/skills/rive-docs/references/feature-support.md`
+- **Add doc links** — Edit `~/.claude/skills/rive-docs/references/doc-links.md`
+- **Modify core skill** — Edit `~/.claude/skills/rive-docs/SKILL.md`
+- **Modify agent behavior** — Edit `~/.claude/agents/rive.md`
 - **Pull updates** — Run `git pull` in the cloned repo and copy the updated files
 
 ---
