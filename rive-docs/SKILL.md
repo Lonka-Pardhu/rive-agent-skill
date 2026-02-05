@@ -1,6 +1,6 @@
 ---
 name: rive-docs
-description: Official Rive documentation covering editor, scripting, runtimes, data binding, and feature support. Primary focus on iOS/mobile integration.
+description: Official Rive documentation covering editor, scripting, app runtimes (iOS, Android, Flutter, React Native, Web), game runtimes (Unity, Unreal, Defold), data binding, and feature support.
 user-invocable: false
 ---
 
@@ -196,8 +196,8 @@ Artboard fit and alignment management.
 State machine control and input interaction.
 **More info:** [State Machine Playback](/docs/runtimes/state-machines)
 
-### Data Binding (CRITICAL FOR iOS)
-Dynamic content updates (text, colors, images, lists).
+### Data Binding
+Dynamic content updates (text, colors, images, lists) at runtime.
 **More info:** [Data Binding](/docs/runtimes/data-binding)
 
 ### Loading Assets
