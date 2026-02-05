@@ -27,12 +27,12 @@ No more "why isn't this working?" moments.
 ## Features
 
 - **Dual-sided explanations** — Editor setup + Runtime code
-- **Works with all platforms** — iOS, Android, Flutter, React Native, Web (especially great with iOS/Swift)
-- **Data binding expertise** — Dynamic text, images, colors, lists
-- **Version awareness** — Knows which runtime versions support which features
+- **Works with all platforms** — iOS, Android, Flutter, React Native, Web, Unity, Unreal
+- **Optimized per Anthropic guidelines** — Focused agent (79 lines) + progressive disclosure skill
+- **Preloads skill automatically** — rive-docs skill injected at startup
+- **Persistent memory** — Learns patterns across conversations
 - **Auto-fetches docs** — Searches rive.app/docs when needed
 - **Auto-activates** — Triggers when you mention "rive", "state machine", ".riv file", etc.
-- **Fully customizable** — Update or extend it anytime to fit your needs
 
 ---
 
@@ -93,17 +93,22 @@ Run `/agents` in Claude Code. You should see `rive` listed under User agents.
 ```
 ~/.claude/
 ├── agents/
-│   └── rive.md                      ← Agent file (copy here)
-└── skills/
-    └── rive-docs/                   ← Skill folder (copy here)
-        ├── SKILL.md                 ← Core skill (109 lines)
-        └── references/
-            ├── feature-support.md   ← Version tables by platform
-            ├── runtime-packages.md  ← Installation & packages
-            └── doc-links.md         ← Documentation URLs
+│   └── rive.md                      ← Agent (79 lines, optimized)
+├── skills/
+│   └── rive-docs/                   ← Skill folder
+│       ├── SKILL.md                 ← Core skill (109 lines)
+│       └── references/
+│           ├── feature-support.md   ← Version tables
+│           ├── runtime-packages.md  ← Installation info
+│           └── doc-links.md         ← Documentation URLs
+└── agent-memory/
+    └── rive/                        ← Persistent memory (auto-created)
 ```
 
-The skill uses **progressive disclosure** — core info loads immediately, reference files load only when needed.
+**Optimized per Anthropic best practices:**
+- Agent preloads `rive-docs` skill automatically
+- Progressive disclosure — reference files load only when needed
+- Persistent memory — learns patterns across conversations
 
 ---
 
